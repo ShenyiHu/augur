@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Banner from './Banner';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+        <div className="App">
+            <Banner distributorName="TLBC" quantity="123" quantityForecastThisMonth="200" quantityYearToDate="5223" />
+            <Banner distributorName="Pepsi" quantity="155" quantityForecastThisMonth="380" quantityYearToDate="10053" />
+            <Banner distributorName="Monster" quantity="2355" quantityForecastThisMonth="30380" quantityYearToDate="662053" />
+        </div>
+    );
+  }
 }
 
 export default App;
